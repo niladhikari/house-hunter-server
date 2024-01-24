@@ -105,7 +105,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/houses",verifyToken, verifyAdmin, async (req, res) => {
+    app.get("/houses", async (req, res) => {
       const result = await houseCollection.find().toArray();
       res.send(result);
     });
